@@ -24,27 +24,7 @@ function handler(req, res) {
           dd += chunk;
           let jsondata = JSON.parse(dd);
           let logic2 = new Logic();
-          let num = 0
-          if(jsondata.x==0 && jsondata.y==0){
-            num = 0
-          }else  if(jsondata.x==1 && jsondata.y==0){
-            num = 1
-          }else  if(jsondata.x==2 && jsondata.y==0){
-            num = 2
-          }else  if(jsondata.x==0 && jsondata.y==1){
-            num = 3
-          }else  if(jsondata.x==1 && jsondata.y==1){
-            num = 4
-          }else  if(jsondata.x==2 && jsondata.y==1){
-            num = 5
-          }else  if(jsondata.x==0 && jsondata.y==2){
-            num = 6
-          }else  if(jsondata.x==1 && jsondata.y==2){
-            num = 7
-          }else{
-            num = 8
-          }
-          let ban2 = logic2.click(num);
+          let ban2 = logic2.click(jsondata);
           res.end(JSON.stringify(ban2));
         });
         break;
