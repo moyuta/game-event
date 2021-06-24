@@ -56,8 +56,3 @@ function win(turn) {
     flag = turn;
   }
 }
-
-let state = new Array(3);
-state[0] = 1;
-state[1] = 2;
-state[2] = 100;
